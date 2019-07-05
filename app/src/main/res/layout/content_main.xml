@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323a4a"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="天津市市管干部概况"
+        android:textColor="#E0F8FE"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#4b5573" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#37404D"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp">
+
+        <!--第一列-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="282"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <!--第二列-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="278"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="284"
+            android:orientation="vertical">
+
+            <!--女干部年龄情况-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#465461" />
+
+            <!--女干部配备情况布局-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="329dp"
+                android:layout_marginTop="2dp">
+
+                <com.zsh.echartsdevelop.EchartView
+                    android:id="@+id/chart_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/tv_textView"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="其中，2个市委工作部门领导班子配备正职女干部，2个市政府工作部
+门配备正职女干部，2个地区党委、政府领导班子中配备正职女干部。"
+                    android:textColor="#c7e4eb" />
+
+            </RelativeLayout>
+
+            <!--党外干部年龄情况-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="2dp"
+                android:background="#465461" />
+
+            <!--党外干部配备情况布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="307dp"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.zsh.echartsdevelop.EchartView
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
